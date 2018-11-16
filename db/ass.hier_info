@@ -1,0 +1,172 @@
+|ass
+clk => clk~0.IN3
+pause => pause~0.IN1
+clear => clear~0.IN1
+led_drv[0] <= seg7dev:drv1.port1
+led_drv[1] <= seg7dev:drv1.port1
+led_drv[2] <= seg7dev:drv1.port1
+led_drv[3] <= seg7dev:drv1.port1
+led_drv[4] <= seg7dev:drv1.port1
+led_drv[5] <= seg7dev:drv1.port1
+led_drv[6] <= seg7dev:drv1.port1
+led_drv[7] <= seg7dev:drv2.port1
+led_drv[8] <= seg7dev:drv2.port1
+led_drv[9] <= seg7dev:drv2.port1
+led_drv[10] <= seg7dev:drv2.port1
+led_drv[11] <= seg7dev:drv2.port1
+led_drv[12] <= seg7dev:drv2.port1
+led_drv[13] <= seg7dev:drv2.port1
+pause_sta <= pause_sta~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ass|stablizer:stb1
+in => counter~33.OUTPUTSELECT
+in => counter~32.OUTPUTSELECT
+in => counter~31.OUTPUTSELECT
+in => counter~30.OUTPUTSELECT
+in => counter~29.OUTPUTSELECT
+in => counter~28.OUTPUTSELECT
+in => counter~27.OUTPUTSELECT
+in => counter~26.OUTPUTSELECT
+in => counter~25.OUTPUTSELECT
+in => counter~24.OUTPUTSELECT
+in => counter~23.OUTPUTSELECT
+in => counter~22.OUTPUTSELECT
+in => counter~21.OUTPUTSELECT
+in => counter~20.OUTPUTSELECT
+in => counter~19.OUTPUTSELECT
+in => counter~18.OUTPUTSELECT
+in => counter~17.OUTPUTSELECT
+in => always0~0.IN0
+clk => counter[16].CLK
+clk => counter[15].CLK
+clk => counter[14].CLK
+clk => counter[13].CLK
+clk => counter[12].CLK
+clk => counter[11].CLK
+clk => counter[10].CLK
+clk => counter[9].CLK
+clk => counter[8].CLK
+clk => counter[7].CLK
+clk => counter[6].CLK
+clk => counter[5].CLK
+clk => counter[4].CLK
+clk => counter[3].CLK
+clk => counter[2].CLK
+clk => counter[1].CLK
+clk => counter[0].CLK
+out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ass|stablizer:stb2
+in => counter~33.OUTPUTSELECT
+in => counter~32.OUTPUTSELECT
+in => counter~31.OUTPUTSELECT
+in => counter~30.OUTPUTSELECT
+in => counter~29.OUTPUTSELECT
+in => counter~28.OUTPUTSELECT
+in => counter~27.OUTPUTSELECT
+in => counter~26.OUTPUTSELECT
+in => counter~25.OUTPUTSELECT
+in => counter~24.OUTPUTSELECT
+in => counter~23.OUTPUTSELECT
+in => counter~22.OUTPUTSELECT
+in => counter~21.OUTPUTSELECT
+in => counter~20.OUTPUTSELECT
+in => counter~19.OUTPUTSELECT
+in => counter~18.OUTPUTSELECT
+in => counter~17.OUTPUTSELECT
+in => always0~0.IN0
+clk => counter[16].CLK
+clk => counter[15].CLK
+clk => counter[14].CLK
+clk => counter[13].CLK
+clk => counter[12].CLK
+clk => counter[11].CLK
+clk => counter[10].CLK
+clk => counter[9].CLK
+clk => counter[8].CLK
+clk => counter[7].CLK
+clk => counter[6].CLK
+clk => counter[5].CLK
+clk => counter[4].CLK
+clk => counter[3].CLK
+clk => counter[2].CLK
+clk => counter[1].CLK
+clk => counter[0].CLK
+out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ass|switch:sw1
+in_clk => out_clk~reg0.CLK
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ass|divider:divder1
+in_clk => ~NO_FANOUT~
+out_clk <= <GND>
+
+
+|ass|counter:cnt1
+clk => out[7]~reg0.CLK
+clk => out[6]~reg0.CLK
+clk => out[5]~reg0.CLK
+clk => out[4]~reg0.CLK
+clk => out[3]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[0]~reg0.CLK
+en => out~7.OUTPUTSELECT
+en => out~6.OUTPUTSELECT
+en => out~5.OUTPUTSELECT
+en => out~4.OUTPUTSELECT
+en => out~3.OUTPUTSELECT
+en => out~2.OUTPUTSELECT
+en => out~1.OUTPUTSELECT
+en => out~0.OUTPUTSELECT
+clr => out~15.OUTPUTSELECT
+clr => out~14.OUTPUTSELECT
+clr => out~13.OUTPUTSELECT
+clr => out~12.OUTPUTSELECT
+clr => out~11.OUTPUTSELECT
+clr => out~10.OUTPUTSELECT
+clr => out~9.OUTPUTSELECT
+clr => out~8.OUTPUTSELECT
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ass|seg7dev:drv1
+num_in[0] => Decoder0.IN3
+num_in[1] => Decoder0.IN2
+num_in[2] => Decoder0.IN1
+num_in[3] => Decoder0.IN0
+drv_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ass|seg7dev:drv2
+num_in[0] => Decoder0.IN3
+num_in[1] => Decoder0.IN2
+num_in[2] => Decoder0.IN1
+num_in[3] => Decoder0.IN0
+drv_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+drv_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

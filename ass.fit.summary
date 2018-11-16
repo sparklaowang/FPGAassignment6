@@ -1,0 +1,10 @@
+Fitter Status : Successful - Wed Nov 14 00:58:28 2018
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : ass
+Top-level Entity Name : ass
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 59 / 3,744 ( 2 % )
+Total pins : 18 / 189 ( 10 % )
+Total memory bits : 0 / 18,432 ( 0 % )
